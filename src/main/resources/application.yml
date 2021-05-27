@@ -1,0 +1,22 @@
+#服务定义 注意":"后需有一个空格
+server:
+  port: 12952 #服务端口
+#服务配置
+auto-punch:
+  #cookie token 以及如何 开启邮箱通知 请参考md教程
+  cookie: null待填写
+  token: null待填写
+  notifyEnable: false #是否开启打卡结果邮件通知,需自行配置邮箱stmp
+  notifyEmail: zghbxll@gmail.com #打卡结果收件人邮箱
+  schedule:
+    autoPunchScheduleCron: "0 0 8 * * ?"  #定时调度,默认为每天早上8点
+#邮箱配置,这里示例为163邮箱，其他邮箱配置自行修改
+spring:
+  mail:
+    host: smtp.163.com
+    username: xuben1999@163.com #发件人邮箱
+    password: null待填写 #邮箱stmp 授权码，不是账号密码
+    port: 25
+    protocol: smtp
+    default-encoding: utf-8
+
